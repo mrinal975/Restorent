@@ -1,15 +1,28 @@
 <template>
     <img class="logo" alt="Logo" src="../assets/resto.jpg" />
     <div class="register">
-        <input type="text" placeholder="Enter Name"/>
-        <input type="text" placeholder="Enter Email"/>
-        <input type="password" placeholder=""/>
-        <button class="">SignUp</button> 
+        <input type="text" v-model="name" placeholder="Enter Name"/>
+        <input type="text" v-model="gmail" placeholder="Enter Email"/>
+        <input type="password" v-model="password" placeholder=""/>
+        <button v-on:click="signUp">SignUp</button> 
     </div>
 </template>
 <script>
 export default {
-    name:'SignUp'
+    name:'SignUp',
+    data(){
+        return{
+            'name':'',
+            'gmail':'',
+            'password':''
+        }
+    },
+
+    methods: {
+        signUp(){
+            console.log('hiiiiii');
+        }
+    },
 }
 </script>
 
