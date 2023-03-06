@@ -1,6 +1,28 @@
 {
-    "user":[
-        {"name" : "Mrinal", "email":"mrinal@gmail.com", "password":"123", "id":1},
-        {"name" : "Mallik", "email":"Mallik@gmail.com", "password":"123", "id":2}
-    ]
+  "users": [
+    {
+      "name": "Mrinal",
+      "email": "mrinal@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Mallik",
+      "email": "Mallik@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "test",
+      "gmail": "sd@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "cr7",
+      "gmail": "cr7@gmail.com",
+      "password": "cr7",
+      "id": 4
+    }
+  ]
 }

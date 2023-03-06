@@ -8,19 +8,32 @@
     </div>
 </template>
 <script>
+
+import axios from 'axios';
+
 export default {
     name:'SignUp',
     data(){
         return{
-            'name':'',
-            'gmail':'',
-            'password':''
+            name:'',
+            gmail:'',
+            password:''
         }
     },
 
     methods: {
         signUp(){
-            console.log('hiiiiii');
+            console.log('hiiiiii',this.name, this.gmail, this.password);
+            let result = axios.post("http://localhost:3000/users",{
+                name:this.name,
+                gmail:this.gmail,
+                password :this.password
+            })
+            if(result.status==201){
+                console.log('created');
+            }
+            // console.log(result);
+            localStorage.setItem("user-info".JSON.stringify(result.data));
         }
     },
 }
