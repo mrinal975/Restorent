@@ -1,7 +1,12 @@
 <template>
 <Header />    
-<h1>dd</h1>
-
+<h1>Hello User,Welcome on Add Restaurant Page.</h1>
+<form class="add">
+<input type="text" v-model="restaurant.name"  placeholder="Enter Name" name="name"/>
+<input type="text" v-model="restaurant.address" placeholder="Enter Address" name="address"/>
+<input type="text" v-model="restaurant.contact" placeholder="Enter Contact" name="contact"/>
+<button type="button" v-on:click="addRestaurant">Submit</button>
+</form>
 </template>
 
 <script>
@@ -12,8 +17,15 @@ export default{
     components: {
         Header
     },
-    data(){
 
+    data(){
+        return {
+            restaurant:{
+                name:'',
+                address:'',
+                contact:''
+            }
+        }
     },
 
     mounted(){
@@ -21,7 +33,9 @@ export default{
     },
 
     methods:{
-
+        addRestaurant(){
+            console.log(this.restaurant, 'colsole');
+        }
     }
 }
 </script>
