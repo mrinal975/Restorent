@@ -40,8 +40,12 @@ export default{
     },
 
     methods:{
-        updateRestaurant(){
-            console.log(this.restaurant);
+        async updateRestaurant(){
+            let data = await axios.put('http://localhost:3000/restaurant/'+this.$route.params.id, this.restaurant);
+            if(data.status==200){
+                console.log('success');
+            }
+
         }
     }
 }
