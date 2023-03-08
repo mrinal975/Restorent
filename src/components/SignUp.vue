@@ -31,10 +31,8 @@ export default {
             .catch(function (error) {
                 console.log(error);
             });
-            console.log(response.status,response.data);
             
             if(response.status==201){
-                console.log('if condition',response.data);
                 localStorage.setItem("user-info", JSON.stringify(response.data));
                 this.$router.push({name:'Home'});
             }

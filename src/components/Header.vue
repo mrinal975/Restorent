@@ -12,9 +12,8 @@ export default{
     name: "Header",
     methods:{
         logout(){
-            console.log('oop');
             localStorage.clear();
-            this.$router.push({name:"Login"})
+            this.$router.push({name:"Login"});
         }
     }
 }
