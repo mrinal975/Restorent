@@ -22,26 +22,24 @@ export default {
     },
 
     methods: {
-        signUp(){
-            let result =  axios.post("http://localhost:3000/users",{
+        async signUp(){
+            let response = await axios.post("http://localhost:3000/users",{
                 name:this.name,
                 gmail:this.gmail,
                 password :this.password
             })
-            .then(function (response) {
-                
-                console.log(response.status,response.data);
-                
-                if(response.status==201){
-                    console.log('if condition',response.data);
-                    localStorage.setItem("user-info", JSON.stringify(response.data));
-                    this.$router.push({name:'Home'});
-                }
-
-            })
             .catch(function (error) {
                 console.log(error);
             });
+            console.log(response.status,response.data);
+            
+            if(response.status==201){
+                console.log('if condition',response.data);
+                localStorage.setItem("user-info", JSON.stringify(response.data));
+                this.$router.push({name:'Home'});
+            }
+
+                        
         }
     },
     
