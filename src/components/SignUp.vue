@@ -23,19 +23,29 @@ export default {
 
     methods: {
         signUp(){
-            console.log('hiiiiii',this.name, this.gmail, this.password);
-            let result = axios.post("http://localhost:3000/users",{
+            let result =  axios.post("http://localhost:3000/users",{
                 name:this.name,
                 gmail:this.gmail,
                 password :this.password
             })
-            if(result.status==201){
-                console.log('created');
-            }
-            // console.log(result);
-            localStorage.setItem("user-info".JSON.stringify(result.data));
+            .then(function (response) {
+                // console.log(response, 'promise',response.data, response.status);
+                localStorage.setItem("user-info".JSON.stringify(result.data));
+                this.$.push({name:'Home'});
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         }
     },
+    
+    mounted()
+    {
+        let user = localStorage.getItem('user-info');
+        if(user){
+            this.$router.push({name:"Home"})
+        }
+    }
 }
 </script>
 

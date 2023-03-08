@@ -1,15 +1,16 @@
 <template>
-<h1>Home</h1>
+<h1>Hellow use, welcome on Home page</h1>
 </template>
 <script>
 export default{
     name:'HomePage',
-    data(){
-        return{
-            name:'',
-            gmail:'',
-            password:''
+    mounted()
+    {
+        let user = localStorage.getItem('user-info');
+        if(!user){
+            this.$router.push({name:"SignUp"});
         }
-    },
+        console.log(user,'user')
+    }
 }
 </script>
