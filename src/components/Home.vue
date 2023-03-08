@@ -46,4 +46,10 @@ export default{
 }
 </script>
 
-<style></style>
+<style>
+td{
+    width: 160px;
+    height: 40px;
+}
+
+</style>
