@@ -1,16 +1,22 @@
 {
-  "restaurant":[
+  "restaurant": [
     {
-      "id":1,
-      "name":"KFC",
-      "address":"mirpur 1,dhaka 1000",
-      "contact":"+0167211233"      
+      "id": 1,
+      "name": "KFC",
+      "address": "mirpur 1,dhaka 1000",
+      "contact": "+0167211233"
     },
     {
-      "id":2,
-      "name":"BFC",
-      "address":"mirpur 10,dhaka 1000",
-      "contact":"+0198511601"   
+      "id": 2,
+      "name": "BFC",
+      "address": "mirpur 10,dhaka 1000",
+      "contact": "+0198511601"
+    },
+    {
+      "name": "test",
+      "address": "test12t",
+      "contact": "tes",
+      "id": 3
     }
   ],
   "users": [

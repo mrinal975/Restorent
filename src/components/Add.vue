@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Header from './Header.vue';
 
 export default{
@@ -33,7 +34,15 @@ export default{
     },
 
     methods:{
-        addRestaurant(){
+        async addRestaurant(){
+            let data = await axios.post('http://localhost:3000/restaurant',this.restaurant)
+                        .catch(function (error) {
+                            // handle error
+                            console.log(error);
+                        })
+            if(data.status==201){
+                console.log('created successfully');
+            }
             console.log(this.restaurant, 'colsole');
         }
     }
