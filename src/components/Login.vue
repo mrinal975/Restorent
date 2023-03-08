@@ -31,7 +31,7 @@ export default{
                 );
             console.log(result.data, 'result', result.data.length);
             if(result.status==200 && result.data.length>0){
-                localStorage.setItem('user-info', JSON.stringify(result.data));
+                localStorage.setItem('user-info', JSON.stringify(result.data[0]));
                 this.$router.push({name:'Home'});
             }
         }
