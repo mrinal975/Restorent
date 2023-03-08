@@ -29,9 +29,15 @@ export default {
                 password :this.password
             })
             .then(function (response) {
-                // console.log(response, 'promise',response.data, response.status);
-                localStorage.setItem("user-info".JSON.stringify(result.data));
-                this.$.push({name:'Home'});
+                
+                console.log(response.status,response.data);
+                
+                if(response.status==201){
+                    console.log('if condition',response.data);
+                    localStorage.setItem("user-info", JSON.stringify(response.data));
+                    this.$router.push({name:'Home'});
+                }
+
             })
             .catch(function (error) {
                 console.log(error);
@@ -41,7 +47,7 @@ export default {
     
     mounted()
     {
-        let user = localStorage.getItem('user-info');
+        let user = JSON.parse(localStorage.getItem('user-info'));
         if(user){
             this.$router.push({name:"Home"})
         }

@@ -22,42 +22,6 @@
       "name": "Mrinal",
       "gmail": "mrinalmallik1@gmail.com",
       "password": "123"
-    },
-    {
-      "name": "test",
-      "gmail": "test",
-      "password": "est",
-      "id": 2
-    },
-    {
-      "name": "gge",
-      "gmail": "gge",
-      "password": "gge",
-      "id": 3
-    },
-    {
-      "name": "sa",
-      "gmail": "as",
-      "password": "as",
-      "id": 4
-    },
-    {
-      "name": "sa",
-      "gmail": "as",
-      "password": "as",
-      "id": 5
-    },
-    {
-      "name": "aw",
-      "gmail": "aw",
-      "password": "aw",
-      "id": 6
-    },
-    {
-      "name": "c",
-      "gmail": "c",
-      "password": "c",
-      "id": 7
     }
   ]
 }
