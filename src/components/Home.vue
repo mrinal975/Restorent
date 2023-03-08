@@ -1,9 +1,14 @@
 <template>
+<Header />
 <h1>Hellow use, welcome on Home page</h1>
 </template>
 <script>
+import Header from './Header.vue';
 export default{
-    name:'HomePage',
+    name:'Home',
+    components: {
+        Header
+    },
     mounted()
     {
         let user = JSON.parse(localStorage.getItem('user-info'));
