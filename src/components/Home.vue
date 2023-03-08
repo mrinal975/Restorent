@@ -17,7 +17,7 @@
         <td>{{ item.contact }}</td>
         <td>
             <router-link :to="'/update/'+item.id">Update</router-link>
-
+            <button v-on:click="deleteRestaurant(item.id)">Delete</button>
         </td>
     </tr>
 </table>
@@ -37,6 +37,15 @@ export default{
     components: {
         Header
     },
+
+    methods:{
+        async deleteRestaurant(id){
+            let data = await axios.delete('http://localhost:3000/restaurant/'+id);
+            if(data.status==200){
+                console.log('succfully deleted');
+            }
+        }   
+    },  
 
     async mounted()
     {
